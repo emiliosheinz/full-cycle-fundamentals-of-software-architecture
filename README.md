@@ -16,3 +16,22 @@ Learning software architecture is essential for developers, regardless of their 
 ## Architecture vs Design
 
 Learning software architecture and design are often viewed as the same, but they are actually distinct. **Architecture:** refers to the global scope of software, considering high-level aspects like componentization, communication methods, and abstractions. It ensures that quality attributes, high-level constraints, and business objectives are met. On the other hand, **Design** focuses on a more local scope, like reducing a class's responsibilities and implementing patterns to facilitate strategies. While all architectural activities involve design, not all design activities are architectural. For instance, high-level decisions like using Open Telemetry for logging are architectural, but the specific code implementation is a design decision. Architectural decisions impact the broader system, whereas design decisions may be more localized and not visible outside their component. This distinction is important, though not universally accepted.
+
+## Pillars of Software Architecture
+
+1. **Structure:** Refers to the organization of components and their relationships. It needs to be flexible, scalable, and maintainable, while attending the business requirements.
+1. **Components:** Are the building blocks of the system. They should be cohesive, loosely coupled, and reusable.
+1. **Relationship between systems:** Refers to how systems interact with each other. It should be clear, efficient, and secure.
+1. **Governance:** Refers to the rules and policies that guide the architecture. It should ensure that the architecture is properly documented, implemented, and maintained.
+
+## Architectural Requirements
+
+Architectural requirements are the constraints and quality attributes that guide the design and implementation of a system. They include all the areas of the company that the system will touch. Some examples are:
+
+1. **Performance:** Respond to user requests within a specific time frame.
+1. **Data Storage:** Store and retrieve data efficiently, according to the business requirements. A given system could be enforced by law to store their data on a specific location, for example.
+1. **Scalability:** Grow and handle increased demand.
+1. **Security:** Protect data and resources from unauthorized access and have required security certifications.
+1. **Legal and Compliance:** Comply with laws and regulations, such as GDPR, HIPAA, etc.
+1. **Audit:** Track and log events for auditing purposes.
+1. **Marketing:** Track and analyze user behavior, providing insights for marketing strategies.
