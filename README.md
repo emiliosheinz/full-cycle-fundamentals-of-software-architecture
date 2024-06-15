@@ -19,6 +19,8 @@ Learning software architecture and design are often viewed as the same, but they
 
 ## Pillars of Software Architecture
 
+The pillars of software architecture are the fundamental concepts that guide the design and implementation of software systems. They include:
+
 1. **Structure:** Refers to the organization of components and their relationships. It needs to be flexible, scalable, and maintainable, while attending the business requirements.
 1. **Components:** Are the building blocks of the system. They should be cohesive, loosely coupled, and reusable.
 1. **Relationship between systems:** Refers to how systems interact with each other. It should be clear, efficient, and secure.
