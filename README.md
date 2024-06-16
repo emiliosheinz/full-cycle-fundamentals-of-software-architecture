@@ -37,3 +37,85 @@ Architectural requirements are the constraints and quality attributes that guide
 1. **Legal and Compliance:** Comply with laws and regulations, such as GDPR, HIPAA, etc.
 1. **Audit:** Track and log events for auditing purposes.
 1. **Marketing:** Track and analyze user behavior, providing insights for marketing strategies.
+
+## Architectural Characteristics
+
+Every time you develop a system, it inherently possesses given characteristics, sometimes, they are poorly implemented, but **intentional design** can improve them. When designing a system, understanding its structure is crucial because it allows you to address impactful points **intentionally**. Without this vision, problems are often solved indirectly and accidentally, which is not ideal. For example, software resilience is necessary for adapting and recovering from crises. If resilience happens by chance due to libraries, it’s not reliable enough. Therefore the architectural characteristics, often non-functional requirements, ensure the system supports the load and remains online during a crisis and they can be divided into three main categories:
+
+1. **Operational:** Operational characteristics envolve several aspects of the system which are vital for your application to be able to operate under non optimal conditions. Even if you aren’t directly managing these aspects, they still important to be aware of them. Some examples are:
+
+   - **Ensuring software availability** involves setting SLAs and SLOs, managing uptime, and planning for system recovery;
+
+   - **Observability** is crucial for tracking availability, and techniques like SRE can help manage downtime;
+
+   - **Disaster recovery** plans are essential, especially for critical systems, and must include strategies for multi-region or multi-cloud deployments to handle failures;
+
+   - **Performance** is another key aspect, involving considerations of latency and throughput. It's vital to design systems to handle the expected load, whether it's 50 or 5000 requests per second, affecting choices like database types;
+
+   - **Backup strategies** and regular testing are crucial to ensure reliability, especially against ransomware attacks;
+
+   - **Security and reliability** also require attention to prevent brute force attacks and manage user authentication securely;
+
+   - **Robustness and scalability** are critical for handling unexpected loads and ensuring the system can grow horizontally and vertically.
+
+1. **Structural:** These characteristics are more closely tied to the development process and how you will build the application. While operational characteristics help with the system's operation and growth, structural characteristics focus on making the software increasingly flexible.
+
+   - **Configurability:** Ensure the software is easily configurable using environment variables or configuration files, and test it across different environments without altering the source code;
+
+   - **Extensibility:** Design the application to easily incorporate third-party elements and adapt to new requirements using interfaces and adapters;
+
+   - **Easy Installation:** Standardize the installation process using containers (e.g., Docker) and manage dependencies effectively;
+
+   - **Component Reuse:** Utilize reusable components to streamline development, and maintain shared libraries to avoid redundancy in distributed systems;
+
+   - **Internationalization:** Plan for currency conversions, payment gateways, and pricing policies. Ensure the frontend accommodates different languages and cultural contexts;
+
+   - **Maintainability:** Follow principles like SOLID, use design patterns, and ensure proper testing to maintain and extend the system easily;
+
+   - **Portability:** Design the system to be less dependent on specific vendors, making it easier to switch databases or observability tools;
+
+   - **Observability:** Implement standardized logging, centralized logging, and metrics to support effective troubleshooting and system support;
+
+   - **Reusability of Components:** Make use of shared libraries and frameworks, especially in monolithic systems, to facilitate the reuse of components and avoid duplicating efforts across teams;
+
+   - **Supportability:** Implement effective logging and monitoring practices to quickly identify and resolve issues, ensuring smooth operation and support for the application.
+
+1. **Cross-Cutting:** These are aspects of software architecture that affect multiple modules or components throughout the application. Therefore, they are essential for ensuring the system's overall quality and performance.
+
+   - **Accessibility:** Ensure your app accommodates diverse user needs, including those with disabilities, using tools and standards for screen reader compatibility, for example.
+
+   - **Data Management:** Efficiently handle data retention and recovery strategies to balance storage costs and compliance requirements.
+
+   - **Authentication and Authorization:** Implement robust mechanisms for user authentication and authorization, leveraging identity providers and API Gateways in distributed systems.
+
+   - **Legal Compliance and Privacy:** Ensure adherence to data protection laws (e.g., LGPD), segregate sensitive data, and employ encryption to safeguard user privacy.
+
+   - **Security:** Integrate security measures across all application layers, utilizing web firewalls and adhering to open standards to mitigate vulnerabilities.
+
+   - **Usability:** Enhance usability across Front End and Back End, employing tools for user behavior analysis and ensuring APIs are well-documented and user-friendly.
+
+## Performance
+
+Performance is a critical aspect of software architecture, as it directly impacts user experience. To ensure optimal performance, architects must first understand how to measure performance metrics. The key units used to measure performance include:
+
+- **Latency or Response Time:** The time taken for a request to travel from the client to the server and back or the time taken to respond to a user request. It is typically measured in milliseconds.
+- **Throughput:** The number of requests processed per unit of time, typically measured in requests per second.
+
+And the main reasons for poor performance usually are:
+
+- **Inefficient Algorithms:** Algorithms that are not optimized for performance can lead to slow response times.
+- **Inadequate Hardware:** Insufficient hardware resources can limit the system's ability to handle high volume of requests efficiently.
+- **Working with blocking I/O:** Blocking I/O operations can lead to performance bottlenecks, especially in systems with high concurrency.
+- **Serial and Synchronous Processing:** Serial and synchronous processing can lead to poor performance, as each operation must wait for the previous one to complete.
+
+But there are always ways to address these issues and improve performance:
+
+- **Optimize computational capacity:** Identify and optimize the most resource-intensive parts of the system to improve overall performance (CPU, memory, disk, etc).
+- **Optimize algorithms:** Use efficient algorithms and data structures to reduce the time complexity of operations.
+- **Optimize I/O operations:** Use non-blocking I/O operations to improve system responsiveness and reduce latency. Embrace concurrency and parallelism to improve throughput.
+- **Database optimization:** Make sure you are using the right Database for the problem, optimize queries, indexes, and caching strategies.
+- **Caching:** Use caching mechanisms to store frequently accessed data and reduce the number of requests to the server.
+
+## Conclusion
+
+Software architecture is a critical topic that ensures the successful development, deployment, and maintenance of large and scalable software systems. By understanding the different types of architecture, the pillars of software architecture, and the architectural requirements, developers can make more informed decisions, evaluate different approaches, and choose the best solution for a given context and problem. Additionally, by focusing on the architectural characteristics, developers can ensure that the system supports the load and remains online during a crisis, while also making the software increasingly flexible and adaptable. That way improving user experience and ensure the system's long-term success.
