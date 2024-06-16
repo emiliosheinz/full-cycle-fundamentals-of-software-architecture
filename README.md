@@ -144,6 +144,24 @@ Scaling a database is a complex task that requires careful planning and consider
 
 1. **Query Optimization:** This includes using indexes, avoiding full table scans, minimizing the number of queries, and optimizing the database schema to improve query performance.
 
+## Resilience
+
+Resilience is the ability of a system to adapt and recover from crises, ensuring that it remains operational and available to users, allowing us to minimize the risks of data loss, for example. It is a critical aspect of software architecture, especially in today's fast-paced and dynamic environments.
+
+### Resilience strategies and best practices
+
+1. **Health Checks:** Implement health checks to monitor the system's status and detect failures early, allowing you to take corrective actions before they impact users. It's important to mention that health checks should actually check the system's health, not just return a HTML with 200 status code.
+
+1. **Rate Limiting:** Implement rate limiting to prevent abuse and protect the system from excessive traffic, ensuring that it remains responsive and available to legitimate users.
+
+1. **Circuit Breaker:** Circuit breakers can be used to temporarily block requests to a failing service and redirect them to a fallback mechanism. Preventing cascading failures.
+
+1. **API Gateway:** An API Gateway can be used to manage incoming requests, enforce policies, and provide a unified interface to the underlying services. It's important to mention that it can be use to implement rate limiting and circuit breakers, for example.
+
+1. **Service Mesh:** A service mesh can be used to manage service-to-service communication, provide observability, and enforce security policies. It can also help with resilience by providing features like circuit breaking, retries, and timeouts.
+
+1. **Redundancy:** By replicating critical components and data across multiple servers, you can ensure that the system remains operational even if one server fails. This approach can be costly but is effective in ensuring high availability.
+
 ## Conclusion
 
 Software architecture is a critical topic that ensures the successful development, deployment, and maintenance of large and scalable software systems. By understanding the different types of architecture, the pillars of software architecture, and the architectural requirements, developers can make more informed decisions, evaluate different approaches, and choose the best solution for a given context and problem. Additionally, by focusing on the architectural characteristics, developers can ensure that the system supports the load and remains online during a crisis, while also making the software increasingly flexible and adaptable. That way improving user experience and ensure the system's long-term success.
