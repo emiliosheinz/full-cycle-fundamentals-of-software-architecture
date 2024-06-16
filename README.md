@@ -116,6 +116,34 @@ But there are always ways to address these issues and improve performance:
 - **Database optimization:** Make sure you are using the right Database for the problem, optimize queries, indexes, and caching strategies.
 - **Caching:** Use caching mechanisms to store frequently accessed data and reduce the number of requests to the server.
 
+## Scalability
+
+Scalability is the ability of systems to support an increase (or decrease) in workloads by increasing (or decreasing) the cost in a proportionate or smaller manner.
+
+### Scalability vs Performance
+
+While performance focuses on reducing latency and increasing throughput, scalability aims to provide the ability to increase or decrease throughput by adding or removing computational capacity. In other words, scalability is a broader concept that encompasses performance and other aspects of system design.
+
+### Types of Scalability
+
+1. **Vertical Scalability:** Involves increasing the capacity of a single machine by adding more resources, such as CPU, memory, or storage. It is limited by the hardware's physical constraints and can be expensive.
+
+1. **Horizontal Scalability:** Involves adding more machines to the system to distribute the workload. It is more cost-effective and can be scaled infinitely, but it requires additional complexity to manage the distributed system.
+
+### Scaling your Database
+
+Scaling a database is a complex task that requires careful planning and consideration of various factors. There are several strategies for scaling databases, including:
+
+1. **Vertical Scaling:** By increasing the resources of a single machine, such as CPU, memory, or storage, you can improve the database's performance. However, this approach has limitations and can be more expensive.
+
+1. **Segregating Responsibilities:** By separating read and write operations, you can distribute the workload across multiple database instances, improving performance and scalability. But it adds additional complexity to manage the data consistency across the instances.
+
+1. **Horizontal Sharding:** This means you will split your data into smaller parts and distribute them across multiple database instances. But it requires careful planning to ensure data consistency and avoid data loss, corruption, or duplication.
+
+1. **Serverless Databases:** By using serverless databases, you can scale your database automatically based on demand, reducing the need for manual intervention and improving cost efficiency. But usually this approach is the most expensive one and comes with risks such as vendor lock-in.
+
+1. **Query Optimization:** This includes using indexes, avoiding full table scans, minimizing the number of queries, and optimizing the database schema to improve query performance.
+
 ## Conclusion
 
 Software architecture is a critical topic that ensures the successful development, deployment, and maintenance of large and scalable software systems. By understanding the different types of architecture, the pillars of software architecture, and the architectural requirements, developers can make more informed decisions, evaluate different approaches, and choose the best solution for a given context and problem. Additionally, by focusing on the architectural characteristics, developers can ensure that the system supports the load and remains online during a crisis, while also making the software increasingly flexible and adaptable. That way improving user experience and ensure the system's long-term success.
